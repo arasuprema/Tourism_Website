@@ -1,0 +1,89 @@
+<<<<<<< HEAD
+=======
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #f9f9f9;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.footer-section {
+  flex: 1;
+  max-width: 200px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.footer-section p {
+  font-size: 14px;
+  color: #666;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #666;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  color: #333;
+  text-decoration: underline;
+}
+
+.newsletter .subscribe {
+  display: flex;
+  align-items: center;
+}
+
+.newsletter input[type="email"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.newsletter button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.newsletter button:hover {
+  background-color: #0056b3;
+}
+<<<<<<< Updated upstream
+
+=======
+>>>>>>> Stashed changes
+>>>>>>> 221979a4a7838cb30928351b9d1f5567ac05685e
