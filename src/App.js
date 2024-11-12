@@ -1,37 +1,23 @@
-import React from "react";
-import { Routes,Route, Link } from "react-router-dom";
-import Home from "./components/Home"
-import About from "./components/About"
-import Blog from "./components/Blog"
-import Contact from "./components/Contact"
-import Layout from "./components/Layout"
-import './App.css'
+// src/App.js
+import React from 'react';
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import ServicePage from './Component/ServicePage';
+// import ServiceDetail from './Component/ServiceDetail';
+import Contact from './Component/Contact';
 
-function App() {
-
+const App = () => {
   return (
-    <div className="App">
-      <h1> Welcome Coders</h1>
-      <nav>
-        <ul className="ul">
-          <li>
-            <Link to="/" className="Home">Ho</Link></li>
-            <li>  <Link to="/about">About</Link></li>
-            <li> <Link to="/contact">Contact</Link></li>
-            <li> <Link to="/blog">Blog</Link></li>
-            <li> <Link to="/layout">Layout</Link></li>
-        </ul>
-      </nav>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="about" element={<About/>}/>
-        <Route path="contact" element={<Contact/>}/>
-        <Route path="blog" element={<Blog/>}/>
-        <Route path="layout" element={<Layout/>}/>
-      </Routes>
-    
-    </div>
-  )
-}
+    // <ServicePage/>
+    <Contact/>
 
-export default App
+    // <Router>
+    //   <Routes>
+    //     <Route path="/" element={<ServicePage />} />
+    //     <Route path="/service/:id" element={<ServiceDetails />} />
+    //     <Route path="/contact" element={<Contact />} />
+    //   </Routes>
+    // </Router>
+  );
+};
+
+export default App;
