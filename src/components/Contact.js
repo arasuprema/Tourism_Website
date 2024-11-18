@@ -36,13 +36,37 @@ const Contact = () => {
 
         <div className="contactInfo">
           <p><span className="icon">📍</span> <strong>Location:</strong> 123 Main Street, Anytown, USA</p>
-          <p><span className="icon">✉️</span><strong>Email:</strong>  contact@example.com</p>
-          <p><span className="icon">📞</span><strong>Phone:</strong>  (123) 456-7890</p>
+          <p><span className="icon">✉️</span><strong>Email:</strong> contact@example.com</p>
+          <p><span className="icon">📞</span><strong>Phone:</strong> (123) 456-7890</p>
+        </div>
+
+        {/* Social Media Links */}
+        <div className="socialMedia">
+          <h3>Follow Us</h3>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="socialIcon">
+            <img src="facebook-icon.png" alt="Facebook" />
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="socialIcon">
+            <img src="twitter-icon.png" alt="Twitter" />
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="socialIcon">
+            <img src="instagram-icon.png" alt="Instagram" />
+          </a>
         </div>
       </div>
 
       {/* Right Side - Contact Form */}
       <div className="right">
+         {/* Tourism Description */}
+         <div className="tourismInfo">
+          <h3>Discover the Wonders of Our Destination</h3>
+          <p>
+            Nestled in the heart of nature, our destination offers breathtaking views, serene landscapes, and an escape from the hustle and bustle of daily life. Whether you're looking to relax or explore, we provide the perfect starting point for unforgettable experiences.
+          </p>
+          <p>
+            Plan your journey today and immerse yourself in local culture, exquisite cuisine, and adventures you'll cherish forever.
+          </p>
+        </div>
         <h2>Get in Touch</h2>
         <form onSubmit={handleSubmit} className="form">
           <label className="label">
