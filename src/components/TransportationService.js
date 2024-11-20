@@ -1,18 +1,21 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./TransportationService.css";
+import tour from "./Assets/tour.png";
+import WCintegration from "./WCintegration";
 
 const TransportationService = () => {
   const navigate = useNavigate();
 
-  const handleBackToBooking = () => {
-    navigate("/book-now");
+  const handleWhatsAppMessage = () => {
+    navigate("/handleWhatsAppMessage");
   };
 
   return (
     <div className="transportation-service">
       <section className="service-header">
         <h1>Transportation Services</h1>
+        <img src={tour} alt="TourImage" />
         <p>Comfortable, reliable, and stress-free transportation for your tour.</p>
       </section>
 
@@ -20,14 +23,17 @@ const TransportationService = () => {
         <h2>Our Transportation Options</h2>
         <div className="options-grid">
           <div className="option-card">
+        <img src={tour} alt="TourImage" />
             <h3>Private Car</h3>
             <p>Enjoy a luxurious and private experience with our chauffeured cars.</p>
           </div>
           <div className="option-card">
+        <img src={tour} alt="TourImage" />
             <h3>Minibus</h3>
             <p>Perfect for small groups, our minibuses ensure a comfortable journey.</p>
           </div>
           <div className="option-card">
+        <img src={tour} alt="TourImage" />
             <h3>Bus</h3>
             <p>Ideal for large groups, our buses are spacious and equipped with modern amenities.</p>
           </div>
@@ -63,7 +69,7 @@ const TransportationService = () => {
       </section>
 
       <div className="service-footer">
-        <button className="cta-button" onClick={handleBackToBooking}>
+        <button className="cta-button" onClick={handleWhatsAppMessage}>
           Back to Booking
         </button>
       </div>

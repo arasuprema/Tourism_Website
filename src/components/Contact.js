@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import twittericon from './Assets/twittericon.png';
+import facebookicon from './Assets/facebookicon.png';
+import instagramicon from './Assets/instagramicon.png';
 import './Contact.css';
 
 const Contact = () => {
@@ -44,13 +47,15 @@ const Contact = () => {
         <div className="socialMedia">
           <h3>Follow Us</h3>
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="socialIcon">
-            <img src="facebook-icon.png" alt="Facebook" />
+          <img src={facebookicon} alt="Facebook" />
           </a>
+          
+          
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="socialIcon">
-            <img src="twitter-icon.png" alt="Twitter" />
+            <img src={twittericon} alt="Twitter" />
           </a>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="socialIcon">
-            <img src="instagram-icon.png" alt="Instagram" />
+            <img src={instagramicon} alt="Instagram" />
           </a>
         </div>
       </div>

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./GuidedTourService.css";
-// import tour from "./Assets/tour.png";
+import handleWhatsAppMessage from "./WCintegration";
+import transportation from "./Assets/transportation.jpg";
 
 const GuidedTourService = () => {
   const [activeFAQ, setActiveFAQ] = useState(null);
@@ -20,7 +21,7 @@ const GuidedTourService = () => {
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">
-          <h1>Explore the Wonders of Paris</h1>
+          <h1>Explore the Wonders</h1>
           <p>Join our expert-led guided tour to experience the magic of the City of Lights.</p>
           <button className="cta-button" onClick={handleBookNow}>
             Book Now
@@ -83,16 +84,11 @@ const GuidedTourService = () => {
 
       {/* Call to Action */}
       <section className="cta-section">
-        <h2>Ready to Explore Paris?</h2>
-        <button className="cta-button" onClick={handleBookNow}>
+        <h2>Ready to Explore ?</h2>
+        <button className="cta-button" onClick={handleWhatsAppMessage}>
           Book Your Spot Now
         </button>
       </section>
-
-      {/* Footer */}
-      <footer className="footer">
-        <p>Contact us at tours@example.com or call +1 234 567 890</p>
-      </footer>
     </div>
   );
 };

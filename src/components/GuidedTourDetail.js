@@ -1,65 +1,96 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./GuidedTourDetail.css";
+import "./GuidedTourService.css";
+import handleWhatsAppMessage from "./WCintegration";
+import transportation from "./Assets/transportation.jpg";
 
-const GuidedTourDetail = () => {
+const GuidedTourService = () => {
+  const [activeFAQ, setActiveFAQ] = useState(null);
   const navigate = useNavigate();
 
-  const handleBackToBooking = () => {
+  const toggleFAQ = (index) => {
+    setActiveFAQ(activeFAQ === index ? null : index);
+  };
+
+  const handleBookNow = () => {
     navigate("/book-now");
   };
 
   return (
-    <div className="guided-tour-details">
-      <section className="details-header">
-        <h1>Guided Tour Details</h1>
-        <p>Experience the best of Paris with our exclusive guided tours.</p>
+    <div className="guided-tour-page">
+      {/* Hero Section */}
+      <section className="hero-section">
+        <div className="hero-content">
+          <h1>Explore the Wonders</h1>
+          <p>Join our expert-led guided tour to experience the magic of the City of Lights.</p>
+          <button className="cta-button" onClick={handleBookNow}>
+            Book Now
+          </button>
+        </div>
       </section>
 
-      <section className="tour-features">
-        <h2>Why Choose Our Tour?</h2>
+      {/* Highlights Section */}
+      <section className="highlights-section">
+        <h2>Tour Highlights</h2>
         <ul>
-          <li>Professional and experienced local guides.</li>
-          <li>Exclusive access to top attractions.</li>
-          <li>Comfortable transport throughout the tour.</li>
-          <li>Small groups for a personalized experience.</li>
-          <li>Flexible itineraries to suit your interests.</li>
+          <li>Visit the Eiffel Tower and take a Seine River Cruise</li>
+          <li>Explore the Louvre Museum with a professional guide</li>
+          <li>Discover hidden gems in Montmartre</li>
+          <li>Taste authentic French cuisine in local restaurants</li>
         </ul>
       </section>
 
-      <section className="customer-testimonials">
-        <h2>What Our Customers Say</h2>
-        <div className="testimonials-grid">
-          <div className="testimonial">
-            <p>"This was the trip of a lifetime! The guide was knowledgeable and friendly."</p>
-            <span>- Sarah J.</span>
+      {/* Itinerary Section */}
+      <section className="itinerary-section">
+        <h2>Itinerary</h2>
+        <div className="itinerary-grid">
+          <div className="itinerary-item">
+            <h3>Day 1: Arrival & Welcome</h3>
+            <p>Arrive in Paris and enjoy a welcome dinner with your tour group.</p>
           </div>
-          <div className="testimonial">
-            <p>"I loved every moment of the tour. The small group made it so much better."</p>
-            <span>- Mark W.</span>
+          <div className="itinerary-item">
+            <h3>Day 2: Landmarks & Museums</h3>
+            <p>Visit the Eiffel Tower, Notre Dame, and the Louvre Museum with a guided tour.</p>
           </div>
-          <div className="testimonial">
-            <p>"Amazing experience! The itinerary was perfect, and the food was incredible."</p>
-            <span>- Emily R.</span>
+          <div className="itinerary-item">
+            <h3>Day 3: Cultural Immersion</h3>
+            <p>Explore Montmartre and experience French art and culture.</p>
+          </div>
+          <div className="itinerary-item">
+            <h3>Day 4: Farewell</h3>
+            <p>Enjoy a farewell breakfast and say goodbye to your new friends.</p>
           </div>
         </div>
       </section>
 
-      <section className="additional-info">
-        <h2>Additional Information</h2>
-        <p>
-          Our tours are designed for all age groups, and we ensure you experience Paris like a local.
-          Whether you’re interested in art, history, or cuisine, we’ve got you covered.
-        </p>
+      {/* FAQ Section */}
+      <section className="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        {[
+          { question: "What is the cancellation policy?", answer: "You can cancel up to 7 days before the tour for a full refund." },
+          { question: "What should I pack?", answer: "Comfortable walking shoes, weather-appropriate clothing, and a camera!" },
+          { question: "Is this tour suitable for children?", answer: "Yes, the tour is family-friendly, with activities suitable for all ages." },
+        ].map((faq, index) => (
+          <div
+            className={`faq-item ${activeFAQ === index ? "active" : ""}`}
+            key={index}
+            onClick={() => toggleFAQ(index)}
+          >
+            <h3>{faq.question}</h3>
+            <p className="faq-answer">{faq.answer}</p>
+          </div>
+        ))}
       </section>
 
-      <div className="details-footer">
-        <button className="cta-button" onClick={handleBackToBooking}>
-          Back to Booking
+      {/* Call to Action */}
+      <section className="cta-section">
+        <h2>Ready to Explore ?</h2>
+        <button className="cta-button" onClick={handleWhatsAppMessage}>
+          Book Your Spot Now
         </button>
-      </div>
+      </section>
     </div>
   );
 };
 
-export default GuidedTourDetail;
+export default GuidedTourService;
