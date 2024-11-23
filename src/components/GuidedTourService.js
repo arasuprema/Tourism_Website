@@ -81,9 +81,9 @@ const GuidedTourService = () => {
       {/* Call to Action */}
       <section className="cta-section">
         <h2>Ready to Explore ?</h2>
-        <button className="cta-button" onClick={handleWhatsAppMessage}>
-          Book Your Spot Now
-        </button>
+        <Link to="/GuidedTourDetail">
+        <button className="cta-button" onClick={handleWhatsAppMessage}>More Detail</button>
+        </Link>
       </section>
     </div>
   );

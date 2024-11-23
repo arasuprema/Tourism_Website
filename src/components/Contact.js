@@ -1,139 +1,69 @@
-import React, { useState } from 'react';
-import twittericon from './Assets/twittericon.png';
-import facebookicon from './Assets/facebookicon.png';
-import instagramicon from './Assets/instagramicon.png';
-import './Contact.css';
+// ContactPage.js
+import React from 'react';
+import './Contact1.css';
+import phone from './Assets/phone.webp';
+import email from './Assets/email.webp';
+import location from './Assets/location.webp';
 
-const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    mobile: '',
-    persons: '',
-    checkIn: '',
-    checkOut: '',
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Add form submission logic here
-  };
-
+const ContactPage = () => {
   return (
-    <div className="container">
-      {/* Left Side - Description and Contact Details */}
-      <div className="left">
-        <h2 className="header">Welcome to Our Contact Page</h2>
-        <h3 className="subHeader">Connecting with Us is Simple</h3>
-        <p className="description">
-          We’re here to help you with any inquiries or support you may need. Reach out to us for the best services and accommodations.
-        </p>
+    <div className="contact-page">
+      {/* Full Cover Image with Heading */}
+      <div className="cover-image">
+        <h1>Contact</h1>
+        <p>Reach out to us for any tourism-related queries or assistance.</p>
+      </div>
 
-        <div className="contactInfo">
-          <p><span className="icon">📍</span> <strong>Location:</strong> 123 Main Street, Anytown, USA</p>
-          <p><span className="icon">✉️</span><strong>Email:</strong> contact@example.com</p>
-          <p><span className="icon">📞</span><strong>Phone:</strong> (123) 456-7890</p>
+      {/* Contact Container */}
+      <div className="contact-container">
+        {/* Left Section */}
+        <div className="contact-left">
+          <h2>Drop Us a Message for Any Query</h2>
+          <h3>Contact Information</h3>
+          <div className="contact-info">
+            <div className="info-item">
+              <img src={location} alt="Location" />
+              <p>123 Tourism Avenue, Wanderlust City, WL 56789</p>
+            </div>
+            <div className="info-item">
+              <img src={phone} alt="Phone" />
+              <p>+1 234 567 890</p>
+            </div>
+            <div className="info-item">
+              <img src={email} alt="Email" />
+              <p>contact@tourism.com</p>
+            </div>
+          </div>
         </div>
 
-        {/* Social Media Links */}
-        <div className="socialMedia">
-          <h3>Follow Us</h3>
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="socialIcon">
-          <img src={facebookicon} alt="Facebook" />
-          </a>
-          
-          
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="socialIcon">
-            <img src={twittericon} alt="Twitter" />
-          </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="socialIcon">
-            <img src={instagramicon} alt="Instagram" />
-          </a>
+        {/* Right Section */}
+        <div className="contact-right">
+          <input type="text" placeholder="Your Name" />
+          <input type="text" placeholder="Your Phone" />
+          <input type="email" placeholder="Your Email" />
+          <input type="text" placeholder="Subject" />
+          <textarea placeholder="Your Message"></textarea>
+          <button type="submit">Submit</button>
         </div>
       </div>
 
-      {/* Right Side - Contact Form */}
-      <div className="right">
-         {/* Tourism Description */}
-         <div className="tourismInfo">
-          <h3>Discover the Wonders of Our Destination</h3>
-          <p>
-            Nestled in the heart of nature, our destination offers breathtaking views, serene landscapes, and an escape from the hustle and bustle of daily life. Whether you're looking to relax or explore, we provide the perfect starting point for unforgettable experiences.
-          </p>
-          <p>
-            Plan your journey today and immerse yourself in local culture, exquisite cuisine, and adventures you'll cherish forever.
-          </p>
+      {/* Map Section */}
+      <div className="map-section">
+        <div className="map-details">
+          <p>Our Location: 123 Tourism Avenue, Wanderlust City, WL 56789</p>
         </div>
-        <h2>Get in Touch</h2>
-        <form onSubmit={handleSubmit} className="form">
-          <label className="label">
-            Name:
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              className="input"
-              required
-            />
-          </label>
-          <label className="label">
-            Mobile Number:
-            <input
-              type="tel"
-              name="mobile"
-              value={formData.mobile}
-              onChange={handleChange}
-              className="input"
-              required
-            />
-          </label>
-          <label className="label">
-            Number of Persons:
-            <input
-              type="number"
-              name="persons"
-              value={formData.persons}
-              onChange={handleChange}
-              className="input"
-              required
-            />
-          </label>
-          <label className="label">
-            Check-In Date:
-            <input
-              type="date"
-              name="checkIn"
-              value={formData.checkIn}
-              onChange={handleChange}
-              className="input"
-              required
-            />
-          </label>
-          <label className="label">
-            Check-Out Date:
-            <input
-              type="date"
-              name="checkOut"
-              value={formData.checkOut}
-              onChange={handleChange}
-              className="input"
-              required
-            />
-          </label>
-          <button type="submit" className="button">Submit</button>
-        </form>
+        <iframe
+          title="Map Direction"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345094373!2d144.95373631561677!3d-37.81627974202144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce6e0!2sVictoria!5e0!3m2!1sen!2sau!4v1632889457366!5m2!1sen!2sau"
+          width="100%"
+          height="400"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+        ></iframe>
       </div>
     </div>
   );
 };
 
-export default Contact;
+export default ContactPage;

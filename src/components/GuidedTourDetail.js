@@ -54,6 +54,7 @@ const GuidedTourDetail = () => {
       </section>
 
       <div className="details-footer">
+        <link to="/Contact"></link>
         <button className="cta-button" onClick={handleBackToBooking}>
           Back to Booking
         </button>

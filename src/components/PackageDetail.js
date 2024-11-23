@@ -90,7 +90,7 @@ const PackageDetail = () => {
         </div>
       </div>
       <div className="get-in-touch-container">
-        <Link to="/contact" className="get-in-touch-button">Get in Touch</Link>
+        <Link to="/Contact" className="get-in-touch-button">Get in Touch</Link>
       </div>
     </div>
   );

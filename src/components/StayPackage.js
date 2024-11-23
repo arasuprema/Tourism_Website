@@ -64,6 +64,9 @@ const StayPackage = () => {
           </div>
         ))}
       </div>
+      <div className="Detail-container">
+        <Link to="/PackageDetail" className="Detail-button">More Detail</Link>
+      </div>
     </div>
   );
 };

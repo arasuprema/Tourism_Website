@@ -142,15 +142,6 @@
   font-size: 0.9rem;
 }
 
-.floating-buttons {
-  bottom: 15px;
-}
-
-.whatsapp-button img, .call-button img {
-  height: 35px;
-  width: 35px;
-}
-
 .get-in-touch-button {
   padding: 10px 25px;
   font-size: 1rem;
@@ -181,15 +172,6 @@
 
 .package-category p, .package-detail-item p {
   font-size: 1rem;
-}
-
-.floating-buttons {
-  bottom: 20px;
-}
-
-.whatsapp-button img, .call-button img {
-  height: 40px;
-  width: 40px;
 }
 
 .get-in-touch-button {

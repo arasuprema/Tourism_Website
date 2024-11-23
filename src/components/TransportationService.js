@@ -69,9 +69,10 @@ const TransportationService = () => {
       </section>
 
       <div className="service-footer">
+        <link to="/Contact">
         <button className="cta-button" onClick={handleWhatsAppMessage}>
-          Back to Booking
-        </button>
+          BookNow
+        </button></link>
       </div>
     </div>
   );
