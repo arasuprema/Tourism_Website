@@ -1,14 +1,13 @@
 import React from 'react';
 import './StayPackage.css';
-
 // Import images from the assets folder
-import img1 from './Assets/img1.jpg';
-import img2 from './Assets/img2.jpg';
-import img3 from './Assets/img3.jpg';
-import img4 from './Assets/img4.jpg';
-import img5 from './Assets/img5.jpg';
-import wicon from './Assets/wicon.png';
-import cicon from './Assets/cicon.png';
+import img1 from './Assets/img1.webp';
+import img2 from './Assets/img2.webp';
+import img3 from './Assets/img3.webp';
+import img4 from './Assets/img4.webp';
+import img5 from './Assets/img5.webp';
+import wicon from './Assets/wicon.webp';
+import cicon from './Assets/cicon.webp';
 // Package data with imported images
 const packages = [
   {
@@ -64,24 +63,6 @@ const StayPackage = () => {
             <p className="package-description">{pkg.description}</p>
           </div>
         ))}
-      </div>
-
-      {/* Check Package Button */}
-      <div className="common-button-container">
-        <a href="/packageDetail" className="check-all-packages-btn">
-          Check Packages
-        </a>
-      </div>
-
-      {/* Floating Buttons */}
-      <div className="floating-buttons">
-        <a href="https://wa.me/1234567890" target="_blank" className="whatsapp-button">
-          <img src={wicon} alt="WhatsApp Image" />
-        </a>
-        <a href="tel:+1234567890" className="call-button">
-        <img src={cicon} alt="Call Image" />
-          
-        </a>
       </div>
     </div>
   );

@@ -1,14 +1,15 @@
 import React from "react";
 import "./HomePage.css"; // Combined CSS for both components
-import transportation from './Assets/transportation.jpg';
-import hotel from './Assets/hotel.png';
-import tour from './Assets/tour.png';
-import swim from './Assets/swim.png';
-import img1 from './Assets/img1.jpg';
-import img2 from './Assets/img2.jpg';
-import img3 from './Assets/img3.jpg';
-import img4 from './Assets/img4.jpg';
-import img5 from './Assets/img5.jpg';
+import transportation from './Assets/transportation.webp';
+import hotel from './Assets/hotel.webp';
+import tour from './Assets/tour.webp';
+import transport from './Assets/transport.webp';
+import swim from './Assets/swim.webp';
+import img1 from './Assets/img1.webp';
+import img2 from './Assets/img2.webp';
+import img3 from './Assets/img3.webp';
+import img4 from './Assets/img4.webp';
+import img5 from './Assets/img5.webp';
 
 const HomePage = () => {
   const services = [
@@ -28,7 +29,7 @@ const HomePage = () => {
       id: 3,
       name: "Transportation",
       description: "Hassle-free transport options for your convenience.",
-      image: hotel,
+      image: transport,
     },
     {
       id: 4,
@@ -67,7 +68,8 @@ const HomePage = () => {
       <div className="container">
         <div className="top-section">
           <div className="image-section">
-            <img src={img1} alt="Modern Bedroom Design" />
+            <img src={img1} alt="Modern Bedroom Design" className="image1" />
+            <img src={img2} alt="Modern Bedroom Design" className="image2" />
           </div>
           <div className="text-section">
             <h2>We Help You Make Modern Interior Design</h2>

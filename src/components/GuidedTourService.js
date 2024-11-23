@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./GuidedTourService.css";
 import handleWhatsAppMessage from "./WCintegration";
-import transportation from "./Assets/transportation.jpg";
+// import transportation from "./Assets/transportation.jpg";
 
 const GuidedTourService = () => {
   const [activeFAQ, setActiveFAQ] = useState(null);
@@ -12,10 +12,6 @@ const GuidedTourService = () => {
     setActiveFAQ(activeFAQ === index ? null : index);
   };
 
-  const handleBookNow = () => {
-    navigate("/book-now");
-  };
-
   return (
     <div className="guided-tour-page">
       {/* Hero Section */}
@@ -23,7 +19,7 @@ const GuidedTourService = () => {
         <div className="hero-content">
           <h1>Explore the Wonders</h1>
           <p>Join our expert-led guided tour to experience the magic of the City of Lights.</p>
-          <button className="cta-button" onClick={handleBookNow}>
+          <button className="cta-button" onClick={handleWhatsAppMessage}>
             Book Now
           </button>
         </div>

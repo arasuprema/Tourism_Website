@@ -1,9 +1,9 @@
 // ContactPage.js
 import React from 'react';
 import './Contact1.css';
-import phone from './Assets/phone.png';
-import email from './Assets/email.png';
-import location from './Assets/location.png';
+import phone from './Assets/phone.webp';
+import email from './Assets/email.webp';
+import location from './Assets/location.webp';
 
 const ContactPage = () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./TransportationService.css";
-import tour from "./Assets/tour.png";
+import tour from "./Assets/tour.webp";
 import WCintegration from "./WCintegration";
 
 const TransportationService = () => {
