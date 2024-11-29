@@ -1,56 +1,74 @@
-/* ContactPage.css */
-
+/* General Styles */
 .contact-page {
-  font-family: Arial, sans-serif;
-  color: #333;
-  background-color:white;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Removes horizontal scrollbar */
 }
 
+/* Cover Image Section */
 .cover-image {
-  background: url('Assets/transportation.webp') no-repeat center center/cover;
-  color:rgb(17, 16, 16);
+  position: relative;
+  width: 100%;
+  height: 60vh; /* Adjust for cover image height */
+  overflow: hidden;
+}
+
+.cover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image covers the container */
+}
+
+.cover-image h1,
+.cover-image p {
+  position: absolute;
+  width: 100%;
   text-align: center;
-  padding: 80px 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .cover-image h1 {
-  font-size: 4rem;
-  margin-bottom: 10px;
+  top: 30%;
+  font-size: 2.5rem;
+  margin: 0 auto;
 }
 
 .cover-image p {
-  font-size: 1.5rem;
+  top: 45%;
+  font-size: 1rem;
+  margin: 0 auto;
 }
 
+/* Contact Container */
 .contact-container {
   display: flex;
-  height:400px;
-  padding: 60px 20px;
-  gap: 20px 10px ;
-  border-radius: 15px;
-  margin:20px 10px;
-  background-color:#d6d4d4;
-  position:relative;
+  flex-wrap: wrap; /* Enables responsiveness */
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 20px auto; /* Centers the container */
 }
 
+/* Left Column */
 .contact-left,
 .contact-right {
-  flex: 1;
+  flex: 1 1 45%; /* Takes up 45% of the width on larger screens */
+  min-width: 300px;
 }
 
 .contact-left h2 {
-  margin-top: 10px;
-  font-size:3rem;
-  word-break:break-word;
-}
-
-.contact-left h3 {
-  margin-top: 20px;
+  font-size: 2rem;
   margin-bottom: 10px;
 }
 
-.contact-info {
-  margin-top: 10px;
+.contact-left h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
 }
 
 .info-item {
@@ -60,47 +78,90 @@
 }
 
 .info-item img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   margin-right: 10px;
 }
 
+/* Right Column (Form Section) */
+.contact-right h3 {
+  margin-bottom: 10px;
+}
+
 .contact-right input,
-.contact-right textarea {
-  width: 500px;
-  height:50px;
+.contact-right textarea,
+.contact-right button {
+  width: 100%;
+  max-width: 400px; /* Limits input field width */
+  padding: 12px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-left:30px;
-  position:relatived;
+  box-sizing: border-box; /* Ensures consistent padding and size */
 }
+
+.contact-right textarea {
+  resize: none; /* Prevents resizing of textarea */
+}
+
 .contact-right button {
-  width:500px;
-  height:50px;
-  background-color:#333;
+  background-color: #333;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-left:30px;
+  transition: background-color 0.3s ease;
 }
 
 .contact-right button:hover {
   background-color: #555;
 }
 
-.map-section {
-  margin-top: 20px;
-  position: relative;
+/* Ensure Button and Input are the Same Size */
+.contact-right input,
+.contact-right textarea,
+.contact-right button {
+  height: 50px;
 }
 
-.map-details {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 10px;
-  border-radius: 5px;
-  font-size: 0.9rem;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column; /* Stacks elements vertically */
+  }
+
+  .contact-left,
+  .contact-right {
+    flex: 1 1 100%; /* Takes full width on smaller screens */
+  }
+
+  .cover-image h1 {
+    font-size: 2rem;
+  }
+
+  .cover-image p {
+    font-size: 0.9rem;
+  }
+
+  .contact-right input,
+  .contact-right textarea,
+  .contact-right button {
+    max-width: 100%; /* Ensures inputs and buttons fit the container */
+  }
+}
+
+@media (max-width: 480px) {
+  .cover-image h1 {
+    font-size: 1.5rem;
+  }
+
+  .cover-image p {
+    font-size: 0.8rem;
+  }
+
+  .contact-right input,
+  .contact-right textarea,
+  .contact-right button {
+    max-width: 100%;
+  }
 }

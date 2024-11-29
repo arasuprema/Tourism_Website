@@ -1,8 +1,7 @@
 
 import Section1 from "../Components/Section1";
 import HomeSection1 from "../Components/HomeSection1";
-
-
+import HomeSection3 from "../Components/HomeSection3";
 
 
 const Home = () => {
@@ -11,6 +10,8 @@ const Home = () => {
 
       <Section1/>
       <HomeSection1/>
+      <HomeSection3/>
+
       
       
       

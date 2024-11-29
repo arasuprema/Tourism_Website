@@ -1,15 +1,18 @@
 // ContactPage.js
 import React from 'react';
-import './Contact1.css';
-import phone from './Assets/phone.webp';
-import email from './Assets/email.webp';
-import location from './Assets/location.webp';
+import './CSS/Contact.css';
+import phone from '../Assets/phone.webp';
+import email from '../Assets/email.webp';
+import location from '../Assets/location.webp';
+import transportation from '../Assets/transportation.webp';
+
 
 const ContactPage = () => {
   return (
     <div className="contact-page">
       {/* Full Cover Image with Heading */}
       <div className="cover-image">
+        <img src={transportation} alt="hero image" />
         <h1>Contact</h1>
         <p>Reach out to us for any tourism-related queries or assistance.</p>
       </div>

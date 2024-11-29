@@ -1,15 +1,15 @@
 import React from "react";
-import "./HomePage.css"; // Combined CSS for both components
-import transportation from './Assets/transportation.webp';
-import hotel from './Assets/hotel.webp';
-import tour from './Assets/tour.webp';
-import transport from './Assets/transport.webp';
-import swim from './Assets/swim.webp';
-import img1 from './Assets/img1.webp';
-import img2 from './Assets/img2.webp';
-import img3 from './Assets/img3.webp';
-import img4 from './Assets/img4.webp';
-import img5 from './Assets/img5.webp';
+import "./CSS/HomeSection3.css"; // Combined CSS for both components
+import transportation from '../Assets/transportation.webp';
+import hotel from '../Assets/hotel.webp';
+import tour from '../Assets/tour.webp';
+import transport from '../Assets/transport.webp';
+import swim from '../Assets/swim.webp';
+import img1 from '../Assets/img1.webp';
+import img2 from '../Assets/img2.webp';
+import img3 from '../Assets/img3.webp';
+import img4 from '../Assets/img4.webp';
+import img5 from '../Assets/img5.webp';
 
 const HomePage = () => {
   const services = [
