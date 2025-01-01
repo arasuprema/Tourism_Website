@@ -9,6 +9,7 @@
   font-size: 2.5rem;
   margin-bottom: 10px;
   text-align:center;
+  color: #333;
 }
 
 .Home2-description {
@@ -56,6 +57,7 @@
 .Home2-service-card {
   width: auto;
   background: rgb(201, 193, 193);
+  color: #555;
   padding: 10px;
   border-radius: 10px;
   text-align: center;
@@ -145,10 +147,12 @@
 .Home3-text{
   flex: 1;
   margin-left:50px;
+  color: #555;
 }
 
 .Home3-text h2 {
   font-size: 2rem;
+  color:#333;
 }
 .Home3-text p {
   font-size: 1.2rem;

@@ -5,6 +5,8 @@ import React, { useRef } from 'react';
 import Section1 from '../Components/Section1';  // Section1 Component
 import HomeSection1 from '../Components/HomeSection1';  // HomeSection1 Component
 import HomeSection3 from '../Components/HomeSection3';  // HomeSection3 Component
+import Package from '../Components/Package'
+import PackageDetail from '../Components/PackageDetail'
 import HomeSection4 from '../Components/HomeSection4';  // HomeSection4 Component
 import FreeTrial from "../Components/FreeTrial";
 
@@ -27,7 +29,8 @@ const Home = () => {
       {/* Other sections */}
       <HomeSection1 scrollToHomeSection4={scrollToHomeSection4} />
       <HomeSection3 />
-      
+      <Package />
+      <PackageDetail />
       {/* HomeSection4 with the ref */}
       <div ref={section4Ref}>
         <HomeSection4 />

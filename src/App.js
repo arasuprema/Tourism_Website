@@ -14,7 +14,9 @@ import Gallery from "./Pages/Gallery";
 import Header from './Components/Header';
 import Footer from "./Components/Footer";
 import WCintegration from "./Components/WCintegration";
+import PackageDetail from "./Components/PackageDetail";
 import Explore from "./Pages/Explore";
+
  
 
 function App() {
@@ -38,6 +40,9 @@ function App() {
         <Route path="gallery" element={<Gallery />} /> {/* Gallery Page */}
         <Route path="service" element={<Service />} /> {/* Service Page */}
         <Route path="explore" element={<Explore />} /> {/* Explore Page */}
+    
+        {/* <Route path="PackageDetail" element={<PackageDetail />} /> */}
+        <Route path="/PackageDetail/:id" element={<PackageDetail />} />
         
       
         
