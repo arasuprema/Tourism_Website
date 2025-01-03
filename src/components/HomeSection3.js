@@ -1,5 +1,6 @@
 import React from "react";
-import "./CSS/HomeSection3.css"; // Combined CSS for both components
+import "./CSS/HomeSection3.css";
+import transportation from '../Assets/transportation.webp';
 import hotel from '../Assets/hotel.webp';
 import tour from '../Assets/tour.webp';
 import transport from '../Assets/transport.webp';
@@ -10,7 +11,6 @@ import img3 from '../Assets/img3.webp';
 import img4 from '../Assets/img4.webp';
 import img5 from '../Assets/img5.webp';
 import img6 from '../Assets/img6.webp';
-
 const HomePage = () => {
   const services = [
     {

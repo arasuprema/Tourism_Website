@@ -7,8 +7,16 @@ body{
 .contact-page {
   font-family: Arial, sans-serif;
   text-align: center;
+/* General Styles */
+.contact-page {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Removes horizontal scrollbar */
 }
 
+/* Cover Image Section */
 .cover-image {
   position: relative;
   justify-content: center;
@@ -17,6 +25,10 @@ body{
   height: 50vh;
   border-radius: 15px;
   background: linear-gradient(135deg, #fffefe 0%, #8b8483 100%);
+  width: 100%;
+  height: 60vh; /* Adjust for cover image height */
+  overflow: hidden;
+
 }
 
 .cover-image img {
@@ -55,7 +67,30 @@ body{
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
+  height: 100%;
+  object-fit: cover; /* Ensures image covers the container */
+}
 
+.cover-image h1,
+.cover-image p {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.cover-image h1 {
+  top: 30%;
+  font-size: 2.5rem;
+  margin: 0 auto;
+}
+
+.cover-image p {
+  top: 45%;
+  font-size: 1rem;
+  margin: 0 auto;
+}
 /* Contact Container */
 .contact-container {
   display: flex;
@@ -112,6 +147,15 @@ body{
   max-width: 400px; /* Limits input field width */
   padding: 12px;
   margin-bottom: 10px;
+}
+
+.contact-right input,
+.contact-right textarea,
+.contact-right button {
+  width: 100%;
+  max-width: 400px; /* Limits input field width */
+  padding: 12px;
+  margin-bottom: 10px;
   color: #333;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -130,7 +174,6 @@ body{
   cursor: pointer;
   transition: background-color 0.3s ease;
   transition: transform 0.3s ease,opacity 0.3s ease;
-
 }
 
 .contact-right button:hover {

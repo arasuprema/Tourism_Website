@@ -1,7 +1,5 @@
-
-import HomeSection5 from "../Components/HomeSection5";
-
-import React, { useRef } from 'react';
+import React from 'react';
+import { useRef } from 'react';
 import Section1 from '../Components/Section1';  // Section1 Component
 import HomeSection1 from '../Components/HomeSection1';  // HomeSection1 Component
 import HomeSection3 from '../Components/HomeSection3';  // HomeSection3 Component
@@ -18,7 +16,6 @@ const Home = () => {
     if (section4Ref.current) {
       section4Ref.current.scrollIntoView({ behavior: 'smooth' });
     }
-
   };
 
   return (
