@@ -11,6 +11,8 @@ import Layout from "./Components/Layout";
 import Gallery from "./Pages/Gallery";
 import Header from './Components/Header';
 import Footer from "./Components/Footer";
+import Package from "./Components/Package";
+import PackageDetail from "./Components/PackageDetail"
 import WCintegration from "./Components/WCintegration";
 import Explore from "./Pages/Explore";
  
@@ -36,7 +38,7 @@ function App() {
         <Route path="explore" element={<Explore />} /> {/* Explore Page */}
         
       
-        
+        <Route path="/PackageDetail/:id" element={<PackageDetail />} />
         {/* Fallback route for 404 - Page Not Found */}
         <Route path="*" element={<h1>404 - Page Not Found</h1>} /> {/* 404 Page */}
       </Routes>

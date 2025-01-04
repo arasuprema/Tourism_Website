@@ -21,13 +21,19 @@ import cicon from '../Assets/cicon.webp'
       }
     }
 
-const WCintegration = () => {
-  // wcintegration.js
-  const handleCall = () => {
-    const phoneNumber = "1234567890"; // Replace with actual number
-    window.location.href = `tel:${phoneNumber}`;
-  };
+// const WCintegration = () => {
+//   // wcintegration.js
+//   const handleCall = () => {
+//     const phoneNumber = "1234567890"; // Replace with actual number
+//     window.location.href = `tel:${phoneNumber}`;
+//   };
 
+// Exporting handleCall function
+export const handleCall = () => {
+  const phoneNumber = "1234567890"; // Replace with actual number
+  window.location.href = `tel:${phoneNumber}`;
+};
+const WCintegration = () => {
   return (
     <div className="interaction-container">
       <button className="call-button" onClick={handleCall}>

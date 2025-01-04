@@ -2,37 +2,58 @@ import React from 'react';
 import { useRef } from 'react';
 import emailjs from 'emailjs-com';
 import './CSS/Contact.css';
-import transportation from '../Assets/transportation.webp';
 import phone from '../Assets/phone.webp';
 import email from '../Assets/email.webp';
 import location from '../Assets/location.webp';
-
+import transportation from '../Assets/transportation.webp';
 const ContactPage = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.init('mWdWnSzZphtckG2Bm'); // Initialize with the public key
-
+    // Send emails through emailjs
     emailjs
-      .sendForm('service_pr3ctbc', 'template_2lh0cqs', form.current)
+      .sendForm(
+        'service_pr3ctbc',           // Replace with your EmailJS Service ID
+        'template_2lh0cqs',          // Replace with your Thank You Template ID
+        form.current,                // Reference to the form
+        'mWdWnSzZphtckG2Bm'          // Replace with your EmailJS Public Key
+      )
       .then(
-        () => {
-          window.alert("Your message has been sent successfully!");
-          console.log('SUCCESS!');
+        (result) => {
+          console.log('Thank You Email Sent:', result.text);
         },
         (error) => {
-          window.alert("Failed to send your message. Please try again.");
-          console.log('FAILED...', error.text);
-        },
+          console.error('Error sending Thank You Email:', error);
+        }
       );
+
+    // Send Admin Notification email
+    emailjs
+      .sendForm(
+        'service_pr3ctbc',           // Replace with your EmailJS Service ID
+        'template_t9dsx19',          // Replace with your Admin Notification Template ID
+        form.current,                // Reference to the form
+        'mWdWnSzZphtckG2Bm'          // Replace with your EmailJS Public Key
+      )
+      .then(
+        (result) => {
+          console.log('Admin Notification Sent:', result.text);
+        },
+        (error) => {
+          console.error('Error sending Admin Notification:', error);
+        }
+      );
+
+    // Optionally reset the form after submission
+    e.target.reset();
   };
 
   return (
     <div className="contact-page">
       {/* Full Cover Image with Heading */}
-      <div className="cover-image">
+      <div className="contact-cover-image">
         <img src={transportation} alt="hero image" />
         <h1>Contact</h1>
         <p>Reach out to us for any tourism-related queries or assistance.</p>
@@ -61,13 +82,16 @@ const ContactPage = () => {
         </div>
 
         {/* Right Section */}
-        <div className="contact-right">
+        <div className="contact-right" id="User-detail">
           <form ref={form} onSubmit={sendEmail}>
             <input type="text" placeholder="Your Name" name="user_name" required />
             <input type="text" placeholder="Your Phone" name="user_phone" required />
             <input type="email" placeholder="Your Email" name="user_email" required />
             <input type="text" placeholder="Subject" name="user_subject" />
             <textarea placeholder="Your Message" name="user_message"></textarea>
+
+            {/* Hidden input field for admin email */}
+            <input type="hidden" name="admin_email" value="prema04092004@gmail.com" />
             <button type="submit">Submit</button>
           </form>
         </div>
